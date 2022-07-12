@@ -11,7 +11,9 @@ a {
     text-decoration: none;
 }
 
-input {
+input[type=text],
+input[type=email],
+input[type=password] {
     -webkit-appearance: none;
     appearance: none;
 }
@@ -58,7 +60,7 @@ body {
 main {
     display: flex;
     justify-content: space-evenly;
-    height: 100%;
+    height: 100vh;
 }
 
 /* ---------------- Image Section ---------------- */
@@ -66,8 +68,8 @@ main {
 .image-container {
     background-image: url('./static/images/dominik-perau-XvUmit29MJ8-unsplash.jpg');
     background-size: 100%;
+    flex: 1 auto;
     position: relative;
-    justify-content: flex-start;
     height: 100%;
     width: 50%;
 }
@@ -195,6 +197,39 @@ main {
     outline-offset: 1px;
 }
 
+.form-row ul li {
+    display: none;
+    position: relative;
+    list-style: none;
+    margin-left: 18px;
+
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+}
+
+.form-row li::before {
+    content: '';
+    background-color: #375060;
+    position: absolute;
+    top: 8px;
+    left: -18px;
+
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+
+}
+
+.form-row input[type=text]:valid,
+.form-row input[type=password]:valid,
+.form-row input[type=email]:valid {
+    background-image: url('./static/images/check-mark-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-size: 8%;
+    background-position: 265px;
+} 
+
 button[type=submit] {
     background-color: #375060;
     border: none;
@@ -241,6 +276,7 @@ form a::after {
     -moz-transition: all ease-out 300ms;
 
 }
+
 
 form a:hover::after {
     transform: scale(1);
