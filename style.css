@@ -228,7 +228,11 @@ main {
     background-repeat: no-repeat;
     background-size: 8%;
     background-position: 265px;
-} 
+}
+
+.form-row input:valid:focus {
+    outline: 5px solid #25f1ad;
+}
 
 button[type=submit] {
     background-color: #375060;
@@ -276,7 +280,6 @@ form a::after {
     -moz-transition: all ease-out 300ms;
 
 }
-
 
 form a:hover::after {
     transform: scale(1);
