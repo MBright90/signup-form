@@ -26,11 +26,11 @@ window.addEventListener('click', checkIsFocus);
 
 // ****************************************************************** //
 
-choosePassword.addEventListener('keyup', () => {                       // Still working on validating each password requirement to
-    passwordReq.forEach(requirement => {                               // ultimately change the color of the requirement to green when
+choosePassword.addEventListener('keyup', () => {                       // Checks the validity of each password requirement and
+    passwordReq.forEach(requirement => {                               // changes the color of the requirement to green when
         regexPattern = new RegExp(`${requirement.dataset.regex}`);     // successfully meeting criteria
-        if (regexPattern.test(choosePassword.value == true)) {
-            requirement.style.color = '#d3eee5';
+        if (regexPattern.test(choosePassword.value) == true) {
+            requirement.style.color = '#25f1ad';
         } else {
             requirement.style.color = 'inherit';
         }    
@@ -48,3 +48,5 @@ passwordInputs.forEach(passwordInput => {                             // Checks 
         }
     });
 });
+
+// ****************************************************************** //
