@@ -18,10 +18,6 @@ function checkIsFocus() {
     };
 };
 
-function checkPassword() {
-    
-};
-
 window.addEventListener('click', checkIsFocus);
 
 // ****************************************************************** //
