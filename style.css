@@ -54,6 +54,7 @@ body {
     font-family: 'josefinsans-reg', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.4rem;
     user-select: none;
+    position: relative;
 }
 
 main {
@@ -288,7 +289,19 @@ form a:hover::after {
 }
 
 footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    opacity: 0.6;
+}
+
+footer a {
+    opacity: 1;
 }
 
 /* ---------------- Responsive Queries ---------------- */
@@ -327,5 +340,10 @@ footer {
     .form-container form fieldset legend,
     .form-container p {
         margin-left: 100px;
+    }
+
+    footer {
+        left: 50vw;
+        width: 50%;
     }
 }
